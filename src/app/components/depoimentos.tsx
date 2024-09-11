@@ -2,7 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 
-const TestimonialCard = ({ image, alt }) => (
+
+type TestimonialCardProps = {
+    image: string;
+    alt: string;
+};
+
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ image, alt }) => (
     <Card className="w-[300px] h-[400px] overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
         <CardContent className="p-0">
             <div className="relative w-full h-[400px]"> {/* Certifique-se que a altura está definida */}

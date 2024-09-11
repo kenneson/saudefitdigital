@@ -1,7 +1,13 @@
 import React from 'react';
 import { Clock, Apple, Book } from 'lucide-react';
 
-const BenefitCard = ({ icon: Icon, title, description }) => (
+type BenefitCardProps = {
+    icon: React.ElementType; // Tipo para o ícone
+    title: string;
+    description: string;    
+};
+
+const BenefitCard: React.FC<BenefitCardProps> = ({ icon: Icon, title, description }) => (
     <div className="flex items-center p-4 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl">
         <div className="flex-shrink-0 mr-4">
             <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#5EA228] text-white">

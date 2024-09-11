@@ -1,16 +1,22 @@
 'use client';
-import { useState } from 'react';
+
+import { useState, ChangeEvent, FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
 
-const EbookForm = () => {
-    const [formData, setFormData] = useState({ name: '', email: '' });
+type FormData = {
+    name: string;
+    email: string;
+};
 
-    const handleChange = (e) => {
+const EbookForm = () => {
+    const [formData, setFormData] = useState<FormData>({ name: '', email: '' });
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         // Simula uma ação de redirecionamento
         window.location.href = 'https://pay.kiwify.com.br/UTHotB8'; 
