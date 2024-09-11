@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { Nunito_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+
+// Importando a fonte Nunito Sans do Google Fonts
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"], 
+});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${nunitoSans.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

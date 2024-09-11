@@ -9,14 +9,14 @@ type TestimonialCardProps = {
 };
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ image, alt }) => (
-    <Card className="w-[300px] h-[400px] overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+    <Card className="w-[300px] h-[380px] overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
         <CardContent className="p-0">
             <div className="relative w-full h-[400px]"> {/* Certifique-se que a altura está definida */}
                 <Image
                     src={image}
                     alt={alt}
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-contain rounded-lg"
                 />
             </div>
         </CardContent>
@@ -36,6 +36,10 @@ const Testimonials = () => {
         {
             image: '/depoimento3.jpg',
             alt: 'Depoimento de Ana',
+        },
+        {
+            image: '/depoimento4.jpg',
+            alt: 'Depoimento de Marta',
         },
     ];
 
