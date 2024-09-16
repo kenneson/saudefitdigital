@@ -9,20 +9,21 @@ import "slick-carousel/slick/slick-theme.css";
 const Hero = () => {
     const ebooks = [
         {
-            title: 'O Guia das Marmitas Perfeitas',
-            description: 'Prepare marmitas saudáveis e deliciosas de forma prática e rápida!',
-            image: '/capa kiwify ebook marmitas.png',
-            alt: 'Capa do E-book 1',
-            cta: 'Adquira Agora !',
-            link: 'https://pay.kiwify.com.br/ZVqHZUs', // link para o primeiro e-book
-        },
-        {
             title: 'Detox 7 dias emagreça até 3kg',
             description: 'Receitas nutritivas para manter uma dieta equilibrada e saborosa!',
             image: '/capa e-book detox.png',
             alt: 'Capa do E-book 2',
             cta: 'Baixe o Guia Fitness!',
-            link: 'https://pay.kiwify.com.br/yoqbtok', // link para o segundo e-book
+            link: 'https://pay.kiwify.com.br/yoqbtok', // link para o primeiro e-book
+
+        },
+        {
+            title: 'O Guia das Marmitas Perfeitas',
+            description: 'Prepare marmitas saudáveis e deliciosas de forma prática e rápida!',
+            image: '/capa kiwify ebook marmitas.png',
+            alt: 'Capa do E-book 1',
+            cta: 'Adquira Agora !',
+            link: 'https://pay.kiwify.com.br/ZVqHZUs', // link para o segundo e-book
         },
         {
             title: 'Chás para Emagrecer',
@@ -33,7 +34,7 @@ const Hero = () => {
             link: 'https://pay.kiwify.com.br/UTHotB8', // link para o terceiro e-book
         },
     ];
-    
+
 
     const settings = {
         dots: true,
@@ -71,7 +72,7 @@ const Hero = () => {
                                     </Button>
                                 </a>
                             </div>
-    
+
                             {/* Imagem à direita */}
                             <div className="w-full md:w-1/2 flex justify-center md:justify-end">
                                 <Image
@@ -88,6 +89,6 @@ const Hero = () => {
             </Slider>
         </header>
     );
-}    
+}
 
 export default Hero;
