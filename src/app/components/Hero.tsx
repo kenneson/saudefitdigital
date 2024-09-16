@@ -14,7 +14,7 @@ const Hero = () => {
             image: '/capa e-book detox.png',
             alt: 'Capa do E-book 2',
             cta: 'Baixe o Guia Fitness!',
-            link: 'https://pay.kiwify.com.br/yoqbtok', // link para o primeiro e-book
+            link: 'https://pay.kiwify.com.br/UmE9h0i', // link para o primeiro e-book
 
         },
         {
